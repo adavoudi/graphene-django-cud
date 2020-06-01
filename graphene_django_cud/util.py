@@ -29,15 +29,16 @@ def disambiguate_id(ambiguous_id: Union[int, float, str]):
     """
     # First see if it is an integer, if so
     # it is definitely not a relay global id
-    final_id = -1
-    try:
-        final_id = int(ambiguous_id)
-        return final_id
-    except ValueError:
-        # Try global value
-        (_, final_id) = from_global_id(ambiguous_id)
-    finally:
-        return final_id
+#     final_id = -1
+#     try:
+#         final_id = int(ambiguous_id)
+#         return final_id
+#     except ValueError:
+#         # Try global value
+#         (_, final_id) = from_global_id(ambiguous_id)
+#     finally:
+#         return final_id
+    return ambiguous_id
 
 
 def disambiguate_ids(ids):
